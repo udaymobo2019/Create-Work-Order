@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:table="sap.ui.table"
+	xmlns:f="sap.ui.layout.form" xmlns:lab="openui5.camera">
+	<Dialog id="addcondialog" class="sapUiSizeCompact" afterClose="dialogAfterclose" title="Camera" >
+		<content>
+			<lab:Camera id="idCamera"  width="300" height="200" visible="true" snapshot=".onSnapshot" singleShotMode="false"/>
+			<Input placeholder="Enter the description" value="" class="sapUiSmallMarginTop" id="typeValue"/>
+			<List id="Cam_list" headerText="Photos" visible="false" growing="false" items="{ path: '/photos' }" mode="Delete" delete="ci_handleDelete2"
+				noDataText="">
+				<CustomListItem>
+					<Image src="{src}" id="myImage" densityAware="false" height="100px"/>
+					<!--	<Image id="myImage1" densityAware="false" height="100px"></Image>-->
+					<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+						<Link text="Desciption - {Imagetext}" target="12" press="handlePress"/>
+						<Label text = "{operationNumber} - Operation"/>
+					</VBox>
+				</CustomListItem>
+			</List>
+		</content>
+		<buttons>
+			<Button text="Close" press="closeCam" type="Emphasized"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

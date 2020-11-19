@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:table="sap.ui.table"
+	xmlns:f="sap.ui.layout.form"  xmlns:html="http://www.w3.org/1999/xhtml" xmlns:form="sap.ui.layout.form">
+	<Dialog id="addcondialog" class="sapUiSizeCompact" afterClose="dialogAfterclose">
+		<content>
+			<HBox id="map_canvas" fitContainer="true" justifyContent="Center" alignItems="Center" width="1000px" height="800px">
+				<html:body class="claro">
+					<html:div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:true" style="width:1000px;height:800px;">
+						<html:div id="viewDiv"></html:div>
+					</html:div>
+				</html:body>
+			</HBox>
+			<!--<Button text="Close" press="clo"/>-->
+		</content>
+		<buttons>
+			<!--<Button text="Ok" press="okmap" type="Emphasized"/>-->
+			<Button text="Cancel" press="okmap2" type="Emphasized"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

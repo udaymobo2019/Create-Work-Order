@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Dialog id="openvariant" class = "sapUiSizeCompact" afterClose="dialogAfterclose" title="Open Variant">
+		<content>
+			<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="3" labelSpanL="3"
+				labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+				columnsL="1" columnsM="1" singleContainerFullSize="false">
+				<f:content>
+					<Label text="Variant Name" required="true"/>
+					<ComboBox id="selectvarname" items="{ path: '/results'}" placeholder="" editable="true" change="Sel_var_chng" enabled="true" visible="true"
+						width="100%" valueState="None" maxWidth="100%">
+						<items>
+							<core:ListItem text="{oGlobalModel>VariantName}" enabled="true" key="{oGlobalModel>VariantName}" additionalText=""/>
+						</items>
+					</ComboBox>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<buttons>
+			<Button text="Ok" press="openvarok" type="Emphasized"/>
+			<Button text="Cancel" press="openvarcancel" type="Emphasized"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

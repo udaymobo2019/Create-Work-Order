@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:table="sap.ui.table"
+	xmlns:f="sap.ui.layout.form" xmlns:lab="openui5.camera" xmlns:u="sap.ui.unified">
+	<Dialog id="addcondialog" class="sapUiSizeCompact" afterClose="dialogAfterclose" title="Attachment">
+		<content>
+			<FlexBox  alignItems="Start" justifyContent="Center">
+				<items>
+					<u:FileUploader buttonText="Upload" visible="true" buttonOnly="true" icon="" name="myFileUpload" value="" placeholder="Upload Attachment"
+						change="_onFileUploaderChange2" id="ci_fileUploader2"/>
+				</items>
+			</FlexBox>
+			<List id="UploadCollection2" mode="Delete" delete="ci_handleDelete1" itemPress="downListPress" enableBusyIndicator="true" headerText=""
+				noDataText="Click 'Upload' button for upload in the Operation" growing="true">
+				
+			</List>
+		</content>
+		<buttons>
+			<Button text="Close" press="closeAtt" type="Emphasized"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

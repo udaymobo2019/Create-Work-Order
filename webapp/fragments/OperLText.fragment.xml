@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:table="sap.ui.table"
+	xmlns:f="sap.ui.layout.form" xmlns:lab="openui5.camera" xmlns:u="sap.ui.unified">
+	<Dialog id="addcondialog" class="sapUiSizeCompact" afterClose="dialogAfterclose" title="Long Text" >
+		<content>
+	
+		<TextArea id="OperText" placeholder="Describe the Problem in Detail" rows="10" cols="40" maxLength="254"
+		wrapping="None" enabled="true" visible="true" width="auto"/>
+		
+			<!--<Input placeholder="Enter the description" value="" class="sapUiSmallMarginTop" id="typeValue"/>-->
+						
+			<!--<List id="UploadCollection2" mode="Delete" delete="ci_handleDelete1" itemPress="downListPress" enableBusyIndicator="true" headerText=""-->
+			<!--	noDataText="Drop files or use the &quot;+&quot; button for upload in the Operation" growing="true"></List>-->
+
+		</content>
+		<buttons>
+			
+			<Button text="Ok" press="OkLText" type="Emphasized"/>
+			<Button text="Close" press="closeLText" type="Emphasized"/>
+			
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
